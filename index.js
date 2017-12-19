@@ -33,6 +33,15 @@
   '()((()))'
 ]
 
+var result = []
+function generateAllParen(n) {
+   if (n === 0) return ''
+   result.push('(' +  generateAllParen(n-1))
+   result.push(')' +  generateAllParen(n-1))
+}
+
+console.log(result)
+
 
 function genParen(n) {
   if (n == 0) return ''
