@@ -44,7 +44,6 @@ function swap(matrix, [x1, y1], [x2, y2]) {
 
 function rotate(matrix, min, max) {
     const n = max
-    console.log('called with ', min, max)
     debugger;
     for (var i = min; i < max; i++) {
         swap(matrix, [min, n - i + min], [i, min])
@@ -55,12 +54,17 @@ function rotate(matrix, min, max) {
         rotate(matrix, min + 1, max - 1)
 }
 
+/////////////////////
+////             ////
+////   Testing   ////
+////             ////
+/////////////////////
 
-const matrix = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-]
+// const matrix = [
+//     [1, 2, 3],
+//     [4, 5, 6],
+//     [7, 8, 9]
+// ]
 
 // const matrix = [
 //   [ 5, 1, 9,11],
@@ -69,9 +73,30 @@ const matrix = [
 //   [15, 14, 12, 16]
 // ]
 
+// const matrix = [
+//     [1, 2, 3, 4, 5],
+//     [1, 2, 3, 4, 5],
+//     [1, 2, 3, 4, 5],
+//     [1, 2, 3, 4, 5],
+//     [1, 2, 3, 4, 5]
+// ]
+
+// const matrix = [
+//     [1, 2, 3, 4, 5, 6],
+//     [1, 2, 3, 4, 5, 6],
+//     [1, 2, 3, 4, 5, 6],
+//     [1, 2, 3, 4, 5, 6],
+//     [1, 2, 3, 4, 5, 6],
+//     [1, 2, 3, 4, 5, 6]
+// ]
+
+const matrix = [
+    [1, 2],
+    [3, 4]
+]
+
 rotate(matrix, 0, matrix.length - 1)
 
-// rotate(matrix)
 console.log(matrix)
 
 
